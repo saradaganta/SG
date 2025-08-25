@@ -77,3 +77,5 @@ for fam in famous:
         print(fam.upper())
     else:
      print(fam)
+
+print("------- Exercise --------------")
