@@ -159,3 +159,25 @@ print(cubes)
 print("-------EXercises-----------")
 players = ['ganguly', 'virat', 'sachin', 'shewag', 'dhoni']
 print(players[1:3])
+print(players[:3])
+print(players[2:])
+print(players[-2:])
+print("-------Exercises-----------")
+for player in players[:2]:
+    print(player.title())
+print("-------Practise-----------")
+my_food = ['chicken', 'lamb', 'fish', 'shrimp', 'crab', 'lobster']
+friend_food = my_food[2:4]
+
+print(f"My favourite foods are {my_food}")
+print(f"My friends favourite foods are {friend_food}")
+my_food.append('ice_cream')
+friend_food.append('cake')
+print(my_food)
+print(friend_food)
+
+friend_food = my_food
+print(my_food)
+print(friend_food)
+
+print("-------Exercises-----------")
