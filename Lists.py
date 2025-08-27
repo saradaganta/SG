@@ -79,3 +79,83 @@ for fam in famous:
      print(fam)
 
 print("------- Exercise --------------")
+
+
+pizza = ['chicken', 'cheese','chkncheese']
+print(pizza)
+for piz in pizza:
+   if piz == 'chicken':
+       print(f"I love {piz} pizza, I really love Pizza")
+   elif piz == 'cheese':
+        print(f"I can have {piz} Pizza, I like this pizza")
+   else:
+       print(f"I really love {piz} pizza, I love it")
+
+print("------- Exercise --------------")
+
+pets = ['dog', 'cat', 'rabbit']
+print(pets)
+for pt in pets:
+    if pt == 'dog':
+        print(f"{pt} is a trusted pet")
+    elif pt == 'cat':
+        print(f"{pt} is a funny pet")
+    else:
+        print(f"{pt} is cute pet")
+
+print("------- Range() Function --------------")
+# First numbers
+for val in range(1,6):
+    print(val)
+
+print("print numbers as list")
+numbers = list(range(1, 6))
+print(numbers)
+
+# even_numbers
+even_numbers = list(range(2,12,2))
+print(even_numbers)
+# Odd_numbers
+odd_numbers = list(range(1,15,3))
+print(odd_numbers)
+# Square_numbers
+squares = []
+for value in range(1, 100):
+    square = value ** 2
+    squares.append(square)
+print(squares)
+
+# simple_Stats
+digits = [1,2,3,4,5,6,7,8,9,0]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+
+print("-------EXercises-----------")
+for count in range(1, 21):
+    print(count)
+print("-------EXercises-----------")
+num = [1,2,3,4,5,6,7,8,9,10]
+for nbr in num:
+    print(nbr)
+print("-------EXercises-----------")
+a = min(num)
+b = max(num)
+c = sum(num)
+print(f"{a},{b},{c}")    
+print("-------EXercises-----------")
+odd = list(range(1, 20, 3))
+print(odd)
+print("-------EXercises-----------")
+
+for lst3 in range(3, 30, 3):
+    print(lst3)
+print("-------EXercises-----------")
+cubes = []
+for value in range(1, 10):
+    cube = value ** 3
+    cubes.append(cube)
+print(cubes)
+print("-------EXercises-----------")
+players = ['ganguly', 'virat', 'sachin', 'shewag', 'dhoni']
+print(players[1:3])
