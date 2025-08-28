@@ -165,7 +165,7 @@ print(players[-2:])
 print("-------Exercises-----------")
 for player in players[:2]:
     print(player.title())
-print("-------Practise-----------")
+print("-------Practise & exercise-----------")
 my_food = ['chicken', 'lamb', 'fish', 'shrimp', 'crab', 'lobster']
 friend_food = my_food[2:4]
 
@@ -181,3 +181,19 @@ print(my_food)
 print(friend_food)
 
 print("-------Exercises-----------")
+items = ['book', 'pen', 'table', 'chair', 'bag', 'bottle']
+print(items[0:3])
+print(items[3:6])
+print(items[-3 :])
+print("-------Exercises-----------")
+my_pz = ['chk','che','veg']
+frnd_pz = my_pz
+my_pz.append('pop')
+print("my_pizza:")
+for pz in my_pz:
+    print(pz)
+frnd_pz.append('chips')
+print("friend pizza:")
+for pz in frnd_pz:
+    print(pz)
+
