@@ -25,4 +25,40 @@ if usr not in banned_usrs:
 else:
     print(f"{usr.title()}, is banned")
 
-print("-----Exercise-------")
+print("-----Exercise--5.1-----")
+car = ['acura','lexus','infinity','suburu','honda','toyota','nissan']
+car = 'suburu'
+if car == 'suburu':
+    print(True)
+else:
+    print(False)
+print(car)
+
+car = 'audi'
+if car == 'suburu':
+    print(True)
+else:
+    print(False)
+print(car)
+
+car = 'acura'
+if car == 'acura':
+    print(True)
+else:
+    print(False)
+print(car)
+
+print("-----Exercise--5.2-----")
+
+x = 10
+if x > 5 :
+    print(True)
+else:
+    print(False)
+
+y = ['a','s','d']
+b = 'a'
+if 'a' in y:
+    print(f"user {b.upper()} exist")
+else:
+    print(f"user {b.upper()} not exist")
