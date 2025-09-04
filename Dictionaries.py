@@ -71,3 +71,77 @@ prog = {
 }
 for program, desc in prog.items():
     print(f"{program.upper()} is used to {desc}")
+
+print("------Exercise-6.4-------")
+car = {
+    'good' : 'acura',
+    'normal' : 'nissan',
+    'bad' : 'range rover'
+}
+for character, name in car.items():
+    print(f"{character.upper()} car is {name}")
+
+print("------Exercise-6.5-------")
+rivers = {
+    'ganga' : 'big',
+    'krishna' : 'large',
+    'godhavari' : 'huge'
+}
+for name, type in rivers.items():
+    print(f"{name.title()} is a {type.title()} river")
+
+print("------Exercise-6.6-------")
+poll = {
+    'telugu' : 'mother tongue',
+    'english' : 'regular',
+    'hindi' : 'occational'
+    }
+for lang, type in poll.items():
+    print(f"{lang.title()} is my {type} language")
+
+print("------Nesting-------")
+
+toy_1 = {'color' : 'green', 'points' : 5}
+toy_2 = {'color' : 'red', 'points' : 10}
+toy_3 = {'color' : 'blue', 'points' : 15}
+
+toys = [toy_1, toy_2, toy_3]
+for toy in toys:
+    print(toy)
+
+# Make an empty list for storing toys”
+toys = []
+for toy_number in range(30):
+    new_toy = {'color': 'green', 'points': 5, 'quality': 'good'}
+    toys.append(new_toy)
+# “Show the first 5 aliens.”
+for toy in toys[:5]:
+    print(toy)
+print("...")
+
+print(f"Total number of toys: {len(toys)}")
+
+# Make an update for first 3 toys”
+for toy in toys[:3]:
+    if toy['color'] == 'green':
+        toy['color'] = 'yellow'
+        toy['quality'] = 'best'
+        toy['points'] = 15
+for toy in toys[:5]:
+    print(toy)
+print("...")
+
+# Make a loop ”
+
+for toy in toys[0:5]:
+    if toy['color'] == 'yellow':
+        toy['color'] = 'cyan'
+        toy['quality'] = 'great'
+        toy['points'] = '25'
+    elif toy['color'] == 'green':
+        toy['color'] = 'red'
+        toy['quality'] = 'very good'
+        toy['points'] = '30'
+for toy in toys[:5]:
+    print(toy)
+print("...")
