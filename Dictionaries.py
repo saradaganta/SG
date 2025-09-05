@@ -145,3 +145,27 @@ for toy in toys[0:5]:
 for toy in toys[:5]:
     print(toy)
 print("...")
+
+# List in Dictonary :
+
+# Store info of pizza order.
+
+pizza = {
+    'curst' : 'thin',
+    'toppings' : ['cheese','olives','hot peppers','pineapple']
+}
+# Summarize:
+print(f"You ordered a {pizza['curst']}-crust pizza " "with the following toppings:")
+for topping in pizza['toppings']:
+    print(f"\t{topping}")
+
+# fav_lang
+fav_lang = {
+    'siva': ['python', 'sql'],
+    'sara': ['python','shell'],
+    'praveen' : ['php', 'sql']
+}
+for name, lang in fav_lang.items():
+    print(f"\n{name.title()} favourite languages are:")
+    for langu in lang:
+        print(f"\n{langu.upper()}")
