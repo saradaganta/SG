@@ -166,6 +166,96 @@ fav_lang = {
     'praveen' : ['php', 'sql']
 }
 for name, lang in fav_lang.items():
+    if len(name) >= 1:
+            print(f"\n{name} has more than one language")
+    else:
+        print(f"{name} has only one language")
     print(f"\n{name.title()} favourite languages are:")
     for langu in lang:
         print(f"\n{langu.upper()}")
+
+# Dictonary in dictonary:
+usr = {
+    'sg':{
+        'fname': 'siva',
+        'lname': 'gurram',
+        'loc': 'tx'
+    },
+    'gp' : {
+    'fname': 'praveen',
+    'lname': 'gurram',
+    'loc': 'aus'
+    },
+}
+for name, info in usr.items():
+    print(f"\nname: {name}")
+    fullname = f"{info['fname']} {info['lname']}"
+    location = info['loc']
+
+    print(f"\ffullname: {fullname.title()}")
+    print(f"\tlocation: {location.title()}")
+
+print("----- Exercise 6-7 -----")
+people = [
+    {'fname': 'siva', 'lname': 'gurram', 'age': '45', 'city': 'mckinney'},
+    {'fname': 'praveen', 'lname': 'gurram', 'age': '42', 'city': 'brisbane'},
+    {'fname': 'sarada', 'lname': 'ganta', 'age': '31', 'city': 'cary'}
+]
+for peop in people:
+    print(f"fname: {peop['fname']}, lname:{peop['lname']}, age:{peop['age']}, city:{peop['city']}")
+
+print("----- Exercise 6-8 -----")
+pets = [{'name': 'pup', 'type': 'dog',},
+{'name': 'kitty', 'type': 'cat'},
+{'name': 'bunny', 'type': 'rabbit'}]
+for pet in pets:
+    if pet['type'] == 'dog':
+        print(f"{pet['name']} is a big {pet['type']}")
+    elif pet['type'] == 'cat':
+        print(f"{pet['name']} is a small {pet['type']}")
+    else:
+        print(f"{pet['name']} is a cute {pet['type']}")
+print("...")
+
+print("----- Exercise 6-9 -----")
+fav_place = {
+    'siva' :{'place' : 'ongole'},
+    'gurram' :{'place' : 'andhra'},
+    'sara' : {'place' : 'dosa'}
+}
+for name,place in fav_place.items():
+    print(f"\nname : {name}")
+    place = place['place']
+
+    print(f"{name} favourite place is {place}")
+
+print("----- Exercise 6-10 -----")
+fav_num = {
+    'sg' : ['100', '200'],
+    'gs' : ['500', '700'],
+    'vg' : ['400', '600']
+}
+for name,num in fav_num.items():
+    print(f"{name} favourite numbers are :")
+    for n in num:
+        print(f"\n{n}")
+print("----- Exercise 6-11 -----")
+citys = {
+    'dallas' : {
+        'country' : 'usa',
+        'population' : '5 million',
+        'fact' : 'growing'},
+    'hyderabad' :{'country' : 'india',
+    'population' : '10 million',
+    'fact' : 'cosmopolition'
+    },
+    'brisbane' : {
+        'country' : 'australia',
+        'population' : '8 million',
+        'fact' : 'beautiful'
+    }
+}
+for city, info in citys.items():
+    print(f"{city} is with population of {info['population']} and it is {info['fact']}")
+
+print("----- Exercise 6-12 -----")
