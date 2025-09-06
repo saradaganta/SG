@@ -260,3 +260,4 @@ for city, info in citys.items():
 
 print("----- Exercise 6-12 -----")
 #"Already completed."
+#---------------------- Done ------------------------
