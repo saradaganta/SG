@@ -259,3 +259,4 @@ for city, info in citys.items():
     print(f"{city} is with population of {info['population']} and it is {info['fact']}")
 
 print("----- Exercise 6-12 -----")
+#"Already completed."
