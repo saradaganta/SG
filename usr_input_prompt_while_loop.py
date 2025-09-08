@@ -175,4 +175,49 @@ print("\n-----poll results ------")
 for name,response in responses.items():
     print(f"{name} would like to drive car {response}")
 """
+"""
 print("******* Exercise 7.8 ********")
+sandwich_orders = ['subway','potbelly','mcd']
+finished_sandwich = []
+
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+
+    print(f"\nI made your {sandwich} sandwich")
+    finished_sandwich.append(sandwich)
+
+print(f"\nThe below sandwich are completed:")
+for sw in finished_sandwich:
+    print(sw)   
+"""
+print("******* Exercise 7.9 ********")
+sandwich_orders = ['pastrami','subway','pastrami','potbelly','mcd','pastrami']
+finished_sandwich = []
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+print(f"\nDeli has run out of 'pastarami'")
+print(sandwich_orders)
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    print(f"\nI made you {sandwich} sandwich")
+    finished_sandwich.append(sandwich)
+print(f"\nThe below sandwich are completed :")
+for sw in finished_sandwich:
+        print(sw)
+
+print("******* Exercise 7.10 ********")
+vacation = {}
+poll = True
+
+while poll:
+     name = input("\nWhat is your name:")
+     response = input("\nWhich place you would like to visit :")
+
+     vacation[name] = response
+
+     repeat = input("Would you like others to respond ? (yes/no)")
+     if repeat == 'no':
+          poll = False
+print("\n----- results -----")
+for name,response in vacation.items():
+     print(f"\n{name} like to visit {response}")
