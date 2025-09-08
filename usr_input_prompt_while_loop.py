@@ -131,7 +131,7 @@ elif age >=3 and age <= 12:
 print("\nTicket price is $10.")
 else:
 print("\nTicket price is $15.")
-"""
+
 # Done
 # While loop with lists and dictonaries:
 #confirmed_users:
@@ -146,3 +146,33 @@ while ucu:
 print("\nThe following users have been confirmed:")
 for c_u in cu:
     print(c_u.title())
+
+# Removing all instances of specific value from list:
+print("****** Remove pets from list ********")
+pets = ['cat', 'dog', 'rabbit', 'dog','parrot','rabbit']
+print(pets)
+
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)
+
+# Filling a dictonary with user input:
+print("****** filling dictornary with user input ********")
+responses = {}
+poll_active = True
+
+while poll_active:
+    name = input("\nWhat is your name :")
+    response = input("What car you want to drive ?")
+
+    responses[name] = response
+
+    repeat = input("Would you like to let another person drive? (yes/no)")
+    if repeat == 'no':
+        poll_active = False
+
+print("\n-----poll results ------")
+for name,response in responses.items():
+    print(f"{name} would like to drive car {response}")
+"""
+print("******* Exercise 7.8 ********")
