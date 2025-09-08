@@ -133,16 +133,3 @@ else:
 print("\nTicket price is $15.")
 """
 # Done
-# While loop with lists and dictonaries:
-#confirmed_users:
-ucu = ['peter','junior','keate','robert','mike','greg']
-cu = []
-
-while ucu:
-    current_user = ucu.pop()
-
-    print(f"Verifying User : {current_user.title()}")
-    cu.append(current_user)
-print("\nThe following users have been confirmed:")
-for c_u in cu:
-    print(c_u.title())
