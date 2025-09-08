@@ -74,7 +74,7 @@ while message != 'quit':
 
     if message != 'quit':
         print(message)
-"""
+
 # using Flag
 active = True
 while active:
@@ -84,4 +84,52 @@ while active:
         active = False
     else:
         print(message)
+"""
 # using Break
+"""
+prompt = "\nPlease enter the city you want to visit:"
+prompt += "\n(Enter 'quit' when you are finished:)"
+
+while True:
+    city = input(prompt)
+    if city == 'quit':
+        break
+    elif city == 'dallas':
+        print(f"\nI live in {city}")
+    else:
+        print(f"\nI would love to visit {city}")
+"""
+# using continue
+"""
+current_number = 0
+while current_number < 9:
+    current_number +=1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)
+"""
+print("****** Exercise 7.4 ***********")
+"""
+prompt = "\nPlease enter pizza topping/s : "
+prompt += "\n(Enter 'quit' when finished:)" 
+
+while True:
+    topping = input(prompt)
+    if topping == 'quit':
+        break
+    else:
+        print(f"\nTopping/s {topping} added to your pizza..!")
+"""
+print("****** Exercise 7.5/7.6 ***********")
+"""
+prompt = "\nEnter your age:"
+while True:
+    age = input(prompt)
+    age = int(age)
+    if age < 3:
+        print("\nNo ticket needed under 3 Yrs old")
+    elif age >=3 and age <= 12:
+        print("\nTicket price is $10.")
+    else:
+        print("\nTicket price is $15.")
+    """
