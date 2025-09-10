@@ -36,6 +36,7 @@ desc_vehicle('acura','suv')
 desc_vehicle('subaru')
 desc_vehicle('nissan','')
 """
+"""
 print("******* Exercise 8.3 *******")
 def make_shirt(size, desc):
     print(f"\nSize of the Shirt is : {size}")
@@ -78,3 +79,74 @@ artist = name('siva', 'kumar','gurram')
 print(artist)
 artist = name('vikranth','gurram')
 print(artist)
+
+# Returning a Dictonary:
+def person(fname, lname):
+    person = {'f':fname, 'l':lname}
+    return person
+artist = person('siva', 'gurram')
+print(artist)
+
+def person(fname, lname, age=None):
+    person = {'f':fname, 'l': lname}
+    if age:
+        person['age'] = age
+    return person
+artist = person('siva','gurram', age=45)
+print(artist)
+# Using a function with a while loop
+def formatted_name(fname, lname):
+    fullname = f"{fname} {lname}"
+    return fullname.title()
+
+while True:
+    print("\nPlease tell your me your name:")
+    print("(enter 'q' at any time to quit)")
+
+    fname = input("First Name: ")
+    if fname == 'q':
+        break
+    lname = input("Last Name :")
+    if lname == 'q':
+        break
+    format_name = formatted_name(fname, lname)
+    print(f"\nHello, {format_name}!")
+"""
+"""
+print("***** Exercise 8.6 *****")
+def city_country(city, country):
+        print(f"\n{city} is in {country}")
+city_country('dallas', 'USA')
+city_country('brisbane', 'Australia')
+city_country('cary', 'USA')
+
+print("***** Exercise 8.7 *****")
+def make_album(title, artist, songs=None):
+        make_album = {'name' : title, 'author' : artist}
+        return make_album
+album = make_album('siva', 'great warriors', 10)
+print(album)
+album = make_album('gurram', 'super heros', 6)
+print(album)
+album = make_album('vik', 'good vibes')
+print(album)
+"""
+print("***** Exercise 8.8 *****")
+def make_album(title, artist, songs=None):
+        make_album = {'name' : title, 'author' : artist, 'songs':songs}
+        return make_album
+while True:
+        print(f"\nPlease enter the album details")
+        print("(enter 'q' at any time to quit)")
+
+        title = input("Enter Name of album :")
+        if title == 'q':
+            break
+        artist = input("Enter Name of the Artist :")
+        if artist == 'q':
+            break
+        songs = input("Enter Number of songs :")
+        if songs == 'q':
+            break
+        album = make_album(title, artist, songs)
+        print(f"\nThe book '{title.title()}' is written by '{artist.title()}' with {songs} songs..!")
