@@ -131,6 +131,7 @@ print(album)
 album = make_album('vik', 'good vibes')
 print(album)
 """
+"""
 print("***** Exercise 8.8 *****")
 def make_album(title, artist, songs=None):
         make_album = {'name' : title, 'author' : artist, 'songs':songs}
@@ -150,3 +151,66 @@ while True:
             break
         album = make_album(title, artist, songs)
         print(f"\nThe book '{title.title()}' is written by '{artist.title()}' with {songs} songs..!")
+
+# Passing a List:
+# greet users
+def greet_usr(names):
+      for name in names:
+            msg = f"Hellow, {name.title()}..!"
+            print(msg)
+usernames = ['Siva', 'Gurram', 'Kumar']
+greet_usr(usernames)
+
+# Modify list in a function:
+# Prinitng models:
+unprint_designs = ['flower pot', 'window blinds', 'wall art']
+completed_models = []
+
+while unprint_designs:
+      current_design = unprint_designs.pop()
+      print(f"\nPrinting Model: {current_design}")
+      completed_models.append(current_design)
+
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+      print(completed_model)
+
+# structuring funcctions:
+def print_models(unprint_designs, completed_models):
+      while unprint_designs:
+            current_design = unprint_designs.pop()
+            print(f"Printing Model: {current_design}")
+            completed_models.append(current_design)
+def show_completed_models(completed_models):
+      for completed_model in completed_models:
+            print(completed_model)
+        
+unprint_designs = ['dome light', 'flower bulb', 'led chandler']
+completed_models = []
+
+print_models(unprint_designs, completed_models)
+show_completed_models(completed_models)
+
+# Preventing a function from modifying: copy
+def make_pizza(*toppings):
+      print(toppings)
+    
+make_pizza('Cheese')
+make_pizza('mushrooms','olives','hot peppers')
+
+def make_pizza(*toppings):
+      for topping in toppings:
+            print(f"- {topping}")
+make_pizza()
+
+make_pizza('Cheese')
+make_pizza('mushrooms','olives','hot peppers')
+
+def make_pizza(size, *toppings):
+      print(f"\nMaking a {size}-inch pizza with the toppings :")
+      for topping in toppings:
+            print(f"- {topping}")
+make_pizza(14, 'cheese')
+make_pizza(18, 'mushrooms','olives','hot peppers')
+"""
+# using arbitary keyword arguments:
