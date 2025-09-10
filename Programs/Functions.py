@@ -240,6 +240,7 @@ def usr_prof(fname, lname, **info):
 prof = usr_prof('vik', 'gur', loc = 'US', grade = '2nd', sport = 'soccer')
 print(prof)
 """
+"""
 print("****** Exercise 8.14 ******")
 def make_car(manfacturer, model, price=None, **info):
     info['company'] = manfacturer
@@ -252,3 +253,9 @@ car = make_car('nissan', 'rogue', color= 'white', type = 'suv', drive='awd')
 car1 = make_car('honda','acura', color = 'white', type = 'suv', drive = 'shawd')
 car2 = make_car('subaru', 'forester', color = 'blue', type = 'suv', price = '$35000', drive = 'symmetrical awd')
 print(f"{car}, \n{car1}, \n{car2}")
+"""
+# Storing your functions in modules:
+from Modules import pizza
+
+pizza.make_pizza(16, 'cheese')
+pizza.make_pizza(14, 'chicken', 'pipeapple', 'hot peppers', 'olives')
