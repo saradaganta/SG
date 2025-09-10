@@ -212,5 +212,43 @@ def make_pizza(size, *toppings):
             print(f"- {topping}")
 make_pizza(14, 'cheese')
 make_pizza(18, 'mushrooms','olives','hot peppers')
-"""
+
 # using arbitary keyword arguments:
+def profile(first, last, **usr_info):
+    usr_info['fname'] = first
+    usr_info['lname'] = last
+    return usr_info
+usr_profile = profile('Siva', 'Gurram', location = 'McKinney', field = 'Information Technology')
+print(usr_profile)
+"""
+"""
+print("****** Exercise 8.12 ******")
+def subway(size, *items):
+    print(f"\nMake {size} inch subway with items: {items} ")
+    for item in items:
+        print(f"-{item}")
+subway(6, 'multigrain', 'onions', 'olives', 'peppers')
+subway(12, 'wheat', 'chicken', 'hot peppers', 'avacado')
+subway(6, 'Herbs', 'tuna', 'cucumbers', 'tomato')
+"""
+"""
+print("****** Exercise 8.13 ******")
+def usr_prof(fname, lname, **info):
+    info['firstname'] = fname
+    info['lastname'] = lname
+    return info
+prof = usr_prof('vik', 'gur', loc = 'US', grade = '2nd', sport = 'soccer')
+print(prof)
+"""
+print("****** Exercise 8.14 ******")
+def make_car(manfacturer, model, price=None, **info):
+    info['company'] = manfacturer
+    info['name'] = model
+
+    if price is not None:
+        info[price] = price
+    return info
+car = make_car('nissan', 'rogue', color= 'white', type = 'suv', drive='awd')
+car1 = make_car('honda','acura', color = 'white', type = 'suv', drive = 'shawd')
+car2 = make_car('subaru', 'forester', color = 'blue', type = 'suv', price = '$35000', drive = 'symmetrical awd')
+print(f"{car}, \n{car1}, \n{car2}")
