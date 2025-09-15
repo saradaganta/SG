@@ -254,8 +254,26 @@ car1 = make_car('honda','acura', color = 'white', type = 'suv', drive = 'shawd')
 car2 = make_car('subaru', 'forester', color = 'blue', type = 'suv', price = '$35000', drive = 'symmetrical awd')
 print(f"{car}, \n{car1}, \n{car2}")
 """
+"""
 # Storing your functions in modules:
+# importing module:
 from Modules import pizza
 
 pizza.make_pizza(16, 'cheese')
 pizza.make_pizza(14, 'chicken', 'pipeapple', 'hot peppers', 'olives')
+
+# importing only function from module
+from Modules.pizza import make_pizza as mp
+
+mp(16, 'chicken')
+mp(12, 'onions', 'mushrooms', 'green peppers')
+"""
+print("**** Exercise 8.15 ****")
+from Modules.printing_func import print_models as pm, show_completed_models as scm
+unprinted_designs = ['car toy', 'key chain', 'stylus pen']
+completed_models = []
+
+pm(unprinted_designs, completed_models)
+scm(completed_models)
+
+
