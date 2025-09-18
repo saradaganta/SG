@@ -1,0 +1,64 @@
+SPARK INTERVIEW QUESTIONS:
+
+1. What is Spark Dataframe ?
+    In DF data organized as table and stored in-memory where we can apply SQL queries on top of DF. Its a high level API.
+2. How do you create spark DF from file ?
+    df = spark.write.csv("file path")
+3. How can i select specific columns in DF ?
+    eg: emp_table columns (id, name, age, sal)
+    df.select("id", "sal")
+4. How to filter rows in DF ?
+    df.where("id = 100")
+    Two ways to read and filter df & Sql
+    createOrReplaceTempView("emp_tbl")
+    spark.sql("Select * from emp_table where id = 100")
+5. Joins in DF.
+    Inner : df1.join(df2, "df1.id == df2.id", "inner")
+    LOJ   : df1.join(df2, "df1.id == df2.id", "left")
+    ROJ   : df1.join(df2, "df1.id == df2.id", "right")
+    FOJ   : df1.join(df2, "df1.id == df2.id", "full")
+    Cross : df1.crossJoin(df2)
+6. Group by in DF ?
+        df.groupBy("country")
+7. Aggregations in DF ?
+        df.agg(min("id"), max("id"), sum("id")..etc)
+8. Difference between DF & RDD ?
+        Rdd = resilent distributed dataset. It looks like array but it has partitions. It is low level API. It is type strict.
+        DF =  Data organized as table and can be perform SQL operations. It is high level API.
+9. Handle NULL's ?
+        df.na.fill("") -- > String
+        df.na.fill(0) -- > Integer
+10. Sort 1 or more columns in DF ?
+        df.orderBy("id").orderBy(desc("salary"))
+11. Common Transformations ?
+        Narrow Transformation : where, select
+        wide Transformation : joins, groupBy, orderby
+        Actions : show(), collect(), count(), first(), take(n)
+12. Convert DF to Pandas DF ?
+        df.toPandas()
+13. What is the purpose of caching in spark DF ?
+        To use same DF multiple time we apply cache on DF.
+        df.cache()
+14. Optimize performance ?
+       Repartition(I)
+       coalesce :
+       use reducedByKey() instead of groupByKey
+       use cache() :
+       Avoid UDF's
+       use kryo serialization instead do of java serialization
+15. how to write DF in file ?
+       file : df.write.parquet("hdfs"//user/cloudera/ouput")
+       database : df.write.jdbc(url = "jdbc:mysql://localhost/retail_db", properties = {"user_name" = "root", "password" = "cloud", "table_name" = "emptbl"})
+16. Rename column in DF ?
+        df.withColumnRenamed("id", "emp_id")
+17. Row Count in DF ?
+        df.count()
+18. Limit no of rows returned by DF ?
+        df.limit(10)
+19. Significance of partitions in DF ?
+         no of Partitions = df.rdd.getNumPartitions() -- (It gives current partitions count)
+         df.repartition(5) (It can increase or decrease)
+20. Create new column in DF?
+        df.withColum("New_Col", concat(col("col1")," ",col("col2"))
+
+DATA Sets does not support by Python.
