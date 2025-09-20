@@ -146,6 +146,7 @@ my_new_car.read_odometer()
 
 """
 # prevent odometer tampering
+"""
 class CAR:
     def __init__(self, make, model, year):
         self.make=make
@@ -168,5 +169,111 @@ print(my_car.get_descriptive_name())
 
 my_car.update_odometer(150)
 my_car.read_odometer()
-
+"""
+# Update odometer.
+"""
+class CAR:
+    def __init__(self, make, model, year):
+        self.make=make
+        self.model=model
+        self.year=year
+        self.odometer_reading = 2500
     
+    def get_descriptive_name(self):
+        long_name=f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles")
+    def update_odometer(self,miligae):
+        if miligae >= self.odometer_reading:
+            self.odometer_reading = miligae
+        else:
+            print("You cannot rollback the odometer miligae")
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+    
+my_used_car = CAR('subaru','forester','2015')
+print(my_used_car.get_descriptive_name())
+
+my_used_car.update_odometer(21500)
+my_used_car.read_odometer()
+
+my_used_car.increment_odometer(100)
+my_used_car.read_odometer()
+"""
+print("****** Exercise 9.4 *********")
+"""
+class Resturant:
+    def __init__(self, restaurant_name, cuisine_type, number_served=0):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_serverd = number_served
+
+    def describe(self):
+        print(f"This restaurant '{self.restaurant_name}' is family friendly with {self.number_serverd} customers served.")
+
+    def open(self):
+        print(f"The {self.cuisine_type} restaurant '{self.restaurant_name}' is open from 10:00 am to 9:00 pm.")
+    
+    def set_number_served(self,cust_served):
+        if cust_served >= self.number_serverd:
+            self.number_serverd = cust_served
+        else:
+            print("You cannot rollback the customers served")
+    def increment_cust_served(self, cust):
+        self.number_serverd += cust
+
+cusine = Resturant('Wood Lands', 'Indian')
+cusine1 = Resturant('Olive Garden', 'Italian', 25)
+
+cusine.set_number_served(30)
+cusine.describe()
+
+print(f"This '{cusine.restaurant_name}' resturant food is tasty")
+print(f"The '{cusine1.restaurant_name}' resturant is {cusine1.cuisine_type}")
+print(f"Customers served in this '{cusine.restaurant_name}' is {cusine.number_serverd}")
+
+cusine.increment_cust_served(200)
+cusine.describe()
+cusine1.open()
+"""
+print("****** Exercise 9.5 *********")
+class USERS:
+    def __init__(self, first_name, last_name, login_attempts, age=None, loc=None):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.loc = loc
+        self.login_attempts = login_attempts
+    
+    def desc_user(self):
+        print(f"\n********** User Profile ******** ")
+        print(f"Name: {self.first_name.title()} {self.last_name.title()}")
+        if self.age:
+            print(f"Age: {self.age}")
+        if self.loc:
+            print(f"loc: {self.loc}")
+    def greet_user(self):
+        print(f"\nHello {self.first_name.title()}, welcome back !")
+    def increment_login_attempts(self, login_times):
+        self.login_attempts += login_times
+        print(f"\n{self.first_name} logged in {self.login_attempts} times")
+    def reset_login_attempts(self, reset_attempts):
+        self.login_attempts = reset_attempts
+        print(f"{self.first_name} login attempts reset to '{self.login_attempts}'")
+
+user1 = USERS('Bala', 'Nanda', 20, age=68, loc='Hyd')
+user2 = USERS('ntr', 'jr', 10, age=42, loc='Mumb')
+user3 = USERS('mah', 'gatt', 15, age=54, loc='Hyd')
+
+user1.desc_user()
+user1.greet_user()
+
+user2.desc_user()
+user2.greet_user()
+
+user3.desc_user()
+user3.greet_user()
+
+user2.increment_login_attempts(10)
+user2.reset_login_attempts(0)
