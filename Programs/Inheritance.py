@@ -148,6 +148,7 @@ tesla.get_range()
 """
 # Import Classes
 # Create a module called car.py and import this file into my_car class:
+"""
 from Modules.car import Car
 
 my_new_car = Car('BMW', 'M3', '2012')
@@ -176,3 +177,28 @@ from Modules.car import ElectricCar as EC
 
 my_ec = EC("tesla", 'Model S', 2025)
 print(my_ec.get_desc_name())
+"""
+
+print("***** Exercise 9.10 *****")
+"""
+from Modules.resturant import Resturant
+
+my_resturant = Resturant("Hot Chips", "Mexican")
+
+my_resturant.desc_resturant()
+"""
+print("***** Exercise 9.11 *****")
+"""
+from Modules.admin import *
+
+usr = ADMIN('Siva', "Gurram", 10, 45)
+usr.desc_user()
+usr.privileges.show_privileges()
+"""
+print("***** Exercise 9.12 *****")
+
+from Modules.privileges_admin import ADMIN
+
+usr = ADMIN('Sarada', "Ganta", 9, 31)
+usr.desc_user()
+usr.privileges.show_privileges()
