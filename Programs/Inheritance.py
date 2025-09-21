@@ -1,4 +1,4 @@
-
+# Inheritance
 print("***** Exercise 9.6 *******")
 """
 class Resturant():
@@ -146,3 +146,33 @@ print(tesla.get_desc_name())
 tesla.desc_battery()
 tesla.get_range()
 """
+# Import Classes
+# Create a module called car.py and import this file into my_car class:
+from Modules.car import Car
+
+my_new_car = Car('BMW', 'M3', '2012')
+print(my_new_car.get_desc_name())
+
+my_new_car.odometer_reading = 25
+my_new_car.read_odometer()
+print("*****************************************")
+from Modules.car import ElectricCar
+
+tesla = ElectricCar("Tesla", "Model X", 2025)
+print(tesla.get_desc_name())
+tesla.battery.desc_battery()
+tesla.battery.get_range()
+print("*****************************************")
+from Modules.car import Car, ElectricCar
+
+my_m3 = Car("bmw", 'm3', 2012)
+print(my_m3.get_desc_name())
+
+my_tesla = ElectricCar("tesla", 'model X', 2025)
+print(my_tesla.get_desc_name())
+print("*****************************************")
+
+from Modules.car import ElectricCar as EC
+
+my_ec = EC("tesla", 'Model S', 2025)
+print(my_ec.get_desc_name())
