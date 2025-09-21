@@ -1,47 +1,4 @@
-"""
-class Car:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0
 
-    def get_desc_name(self):
-        longname = f"{self.year} {self.make} {self.model}"
-        return longname.title()
-    def read_odometer(self):
-        print(f"This car has {self.odometer_reading} miles on it.")
-    def update_odometer(self, miles):
-        if miles >= self.odometer_reading:
-            self.odometer_reading = miles
-        else:
-            print(f"You cannnot roll back odometer from {self.odometer_reading} miles")
-    def increment_odometer(self, miliage):
-        self.odometer_reading += miliage
-    def get_range(self):
-        if self.battery_size == 40:
-            range = 150
-        elif self.battery_size == 65:
-            range = 225
-        print(f"This car can go about {range} miles on full charge.")
-    
-class ElectricCar(Car):
-    def __init__(self, make, model, year):
-        super().__init__(make, model, year)
-    
-        self.battery_size = 65
-
-    def desc_battery(self):
-        print(f"This car has a {self.battery_size} --kwh battery.")
-    
-    def fill_gas_tank(self):
-        print("This car dosen't have gas tank!")
-    
-tesla = ElectricCar('Tesla', 'X', 2025)
-print(tesla.get_desc_name())
-tesla.desc_battery()
-tesla.get_range()
-"""
 print("***** Exercise 9.6 *******")
 """
 class Resturant():
@@ -102,6 +59,7 @@ admin1.greet_user()
 admin1.show_privileges()
 """
 print("***** Exercise 9.8 *******")
+"""
 class USERS:
     def __init__(self, first_name, last_name, login_attempts, age=None, loc=None):
         self.first_name = first_name
@@ -142,3 +100,49 @@ admin1 = ADMIN("siva", "gurram", 45, "dallas")
 admin1.desc_user()
 admin1.greet_user()
 admin1.privileges.show_privileges()
+"""
+print("***** Exercise 9.9 *******")
+"""
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_desc_name(self):
+        longname = f"{self.year} {self.make} {self.model}"
+        return longname.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it.")
+    def update_odometer(self, miles):
+        if miles >= self.odometer_reading:
+            self.odometer_reading = miles
+        else:
+            print(f"You cannnot roll back odometer from {self.odometer_reading} miles")
+    def increment_odometer(self, miliage):
+        self.odometer_reading += miliage
+    def get_range(self):
+        if self.battery_size == 40:
+            range = 150
+        elif self.battery_size == 65:
+            range = 225
+        print(f"This car can go about {range} miles on full charge.")
+    
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+    
+        self.battery_size = 65
+
+    def desc_battery(self):
+        print(f"This car has a {self.battery_size} --kwh battery.")
+    
+    def fill_gas_tank(self):
+        print("This car dosen't have gas tank!")
+    
+tesla = ElectricCar('Tesla', 'X', 2025)
+print(tesla.get_desc_name())
+tesla.desc_battery()
+tesla.get_range()
+"""
