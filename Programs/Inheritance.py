@@ -43,6 +43,7 @@ tesla.desc_battery()
 tesla.get_range()
 """
 print("***** Exercise 9.6 *******")
+"""
 class Resturant():
     def __init__(self, name, type):
         self.name = name
@@ -61,5 +62,83 @@ resturant1 = Resturant('swagath', 'indian')
 print(resturant1.get_desc())
 
 ice_stand = IceCreamStand('sweet treats', 'Dessart', icecream="coconut")
-#print(ice_stand.get_desc())
+print(ice_stand.get_desc())
 ice_stand.desc_icecream()
+"""
+print("***** Exercise 9.7 *******")
+"""
+class USERS:
+    def __init__(self, first_name, last_name, login_attempts, age=None, loc=None):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.loc = loc
+        self.login_attempts = login_attempts
+    
+    def desc_user(self):
+        print(f"\n********** User Profile ******** ")
+        print(f"Name: {self.first_name.title()} {self.last_name.title()}")
+        if self.age:
+            print(f"Age: {self.age}")
+        if self.loc:
+            print(f"loc: {self.loc}")
+    def greet_user(self):
+        print(f"\nHello {self.first_name.title()}, welcome back !")
+class ADMIN(USERS):
+    def __init__(self, first_name, last_name, login_attempts, age=None, loc=None):
+        super().__init__(first_name, last_name, login_attempts, age, loc)
+        self.privileges = [
+        "can add a post",
+        "can delete a post",
+        "can ban user"]
+    def show_privileges(self):
+        print(f"\nAdministrator privileges for {self.first_name.title()}:")
+        for privileges in self.privileges:
+            print(f"-- {privileges}")
+
+admin1 = ADMIN("siva", "gurram", 45, "dallas")
+admin1.desc_user()
+admin1.greet_user()
+admin1.show_privileges()
+"""
+print("***** Exercise 9.8 *******")
+class USERS:
+    def __init__(self, first_name, last_name, login_attempts, age=None, loc=None):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.loc = loc
+        self.login_attempts = login_attempts
+    
+    def desc_user(self):
+        print(f"\n********** User Profile ******** ")
+        print(f"Name: {self.first_name.title()} {self.last_name.title()}")
+        if self.age:
+            print(f"Age: {self.age}")
+        if self.loc:
+            print(f"loc: {self.loc}")
+    def greet_user(self):
+        print(f"\nHello {self.first_name.title()}, welcome back !")
+
+class Privileges:
+    def __init__(self, privileges=None):
+        if privileges is None:
+            privileges= [
+        "can add a post",
+        "can delete a post",
+        "can ban user"]
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print(f"\nAdministrator privileges:")
+        for privileges in self.privileges:
+            print(f"-- {privileges}")      
+class ADMIN(USERS):
+    def __init__(self, first_name, last_name, login_attempts, privileges, age=None, loc=None):
+        super().__init__(first_name, last_name, login_attempts, age, loc)
+        self.privileges = Privileges()
+
+admin1 = ADMIN("siva", "gurram", 45, "dallas")
+admin1.desc_user()
+admin1.greet_user()
+admin1.privileges.show_privileges()
