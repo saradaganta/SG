@@ -197,7 +197,7 @@ usr.privileges.show_privileges()
 """
 print("***** Exercise 9.12 *****")
 
-from Modules.privileges_admin import ADMIN
+from Modules.privileges_admin import *
 
 usr = ADMIN('Sarada', "Ganta", 9, 31)
 usr.desc_user()
