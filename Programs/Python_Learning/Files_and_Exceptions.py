@@ -87,6 +87,7 @@ else:
 print("********** Exercise 10.1/10.2/10.3 ***********")
 
 # Priniting content by reeading entire file:
+"""
 from pathlib import Path
 path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/learn_python.txt')
 text = path.read_text()
@@ -106,3 +107,59 @@ print(len(pi_string))
 # Writing result to target folder
 output_path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/like_to_learn_python.txt')
 output_path.write_text(pi_string)
+"""
+# write multiple lines to file.
+"""
+from pathlib import Path
+
+content = "I love programming. \n"
+content += "I am learning programming. \n"
+content += "I will become master in programming. \n"
+
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/writing_multiple_lines.txt')
+path.write_text(content)
+"""
+
+print("***** Exercise 10.4 ******")
+# Guest
+"""
+from pathlib import Path
+
+content = input("Please Enter the Guest Name: ")
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/writing_guests.txt')
+path.write_text(content)
+"""
+print("***** Exercise 10.4 ******")
+# Guest list
+"""
+from pathlib import Path
+
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/enter_names.txt')
+names = []
+
+while True:
+    name = input("Enter Guest Name :")
+    if name.lower() == "quit":
+        break
+    names.append(name)
+    print(f"Hello {name}, you have been added to guest book.")
+
+path.write_text("\n".join(names))
+print(f"\nGuest book saved to {path.resolve()}")
+"""
+# Countries list
+
+from pathlib import Path
+
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/countries_list.txt')
+names = []
+
+while True:
+    name = input("Enter country Name :")
+    if name.lower() == "quit":
+        break
+    names.append(name)
+    print(f"Hello {name}, you have been added to guest book.")
+
+path.write_text("\n".join(names))
+print(f"\nGuest book saved to {path.resolve()}")
