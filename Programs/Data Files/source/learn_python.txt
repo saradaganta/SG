@@ -1,0 +1,3 @@
+I love Python 
+I like to learn Python everyday 
+Python is fun to learn
