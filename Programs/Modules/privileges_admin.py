@@ -16,7 +16,3 @@ class ADMIN(USERS):
     def __init__(self, first_name, last_name, login_attempts, privileges, age=None, loc=None):
         super().__init__(first_name, last_name, login_attempts, age, loc)
         self.privileges = Privileges()
-
-user=USERS('Siva', 'Gurram', 21, 45)
-user.desc_user()
-user.greet_user()

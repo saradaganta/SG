@@ -196,9 +196,23 @@ usr.desc_user()
 usr.privileges.show_privileges()
 """
 print("***** Exercise 9.12 *****")
-
+"""
 from Modules.privileges_admin import *
 
 usr = ADMIN('Sarada', "Ganta", 9, 31)
 usr.desc_user()
 usr.privileges.show_privileges()
+"""
+# Python Standard Library Example:
+# Print random numbers:
+print("Random Number")
+
+from random import randint
+print(randint(1,9))
+
+print("Random numbers from range 1 to 10")
+
+# Print random numbers using for loop:
+from random import randint
+for i in range(10):
+    print(randint(1, 9))

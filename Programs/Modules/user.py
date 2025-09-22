@@ -15,7 +15,3 @@ class USERS:
             print(f"loc: {self.loc}")
     def greet_user(self):
         print(f"\nHello {self.first_name.title()}, welcome back !")
-
-user=USERS('Siva', 'Gurram', 21, 45)
-user.desc_user()
-user.greet_user()
