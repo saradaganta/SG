@@ -148,7 +148,7 @@ path.write_text("\n".join(names))
 print(f"\nGuest book saved to {path.resolve()}")
 """
 # Countries list
-
+"""
 from pathlib import Path
 
 path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/target/countries_list.txt')
@@ -163,3 +163,58 @@ while True:
 
 path.write_text("\n".join(names))
 print(f"\nGuest book saved to {path.resolve()}")
+"""
+######## Exceptions #########
+# Handling zero division error exception:
+# Division calculator.
+#print(5/0)
+
+# use try-except Blocks.
+"""
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+# use exceptions to prevent crashes:
+#division_calc.
+print("Give me two numbers and i will divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("Enter First Number : ")
+    if first_number == 'q':
+        break
+    second_number = input("Enter Second Number : ")
+    if second_number == 'q':
+        break
+    try:
+        answer = int(first_number)/int(second_number)
+    except ZeroDivisionError:
+        print("You cannot divide by 0 ...!")
+    else:
+        print(answer)
+"""
+# Handling File not found Error:
+"""
+from pathlib import Path
+
+path = Path('random.txt')
+try:
+    contents = path.read_text(encoding='utf-8')
+except FileNotFoundError:
+    print(f"Sorry, file {path} does not exist..!")
+"""
+
+# Analyse Text file:
+from pathlib import Path
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/random.txt')
+try:
+    contents = path.read_text(encoding='utf-8')
+except FileNotFoundError:
+    print(f"The file {path} is not available..!")
+else:
+    # count words in file.
+    words = contents.split()
+    num_words = len(words)
+    print(f"The file {path} has about {num_words} words.")
