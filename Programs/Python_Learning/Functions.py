@@ -269,11 +269,26 @@ mp(16, 'chicken')
 mp(12, 'onions', 'mushrooms', 'green peppers')
 """
 print("**** Exercise 8.15 ****")
+"""
 from Modules.printing_func import print_models as pm, show_completed_models as scm
 unprinted_designs = ['car toy', 'key chain', 'stylus pen']
 completed_models = []
 
 pm(unprinted_designs, completed_models)
 scm(completed_models)
+"""
+# get index of two numbers:
+
+def two_sum(nums, target):
+    nums = [1,2,7,8]
+    idx = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in idx:
+            return[idx[complement]+1, i+1]
+        idx[num] = 1
+    return []
+
+
 
 
