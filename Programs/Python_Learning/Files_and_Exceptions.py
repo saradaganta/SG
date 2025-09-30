@@ -207,6 +207,7 @@ except FileNotFoundError:
 """
 
 # Analyse Text file:
+"""
 from pathlib import Path
 path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/random.txt')
 try:
@@ -218,3 +219,85 @@ else:
     words = contents.split()
     num_words = len(words)
     print(f"The file {path} has about {num_words} words.")
+"""
+print("*** Exercise 10.6/10.7 ***")
+"""
+print("Give me two numbers and i will add them.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("Enter First Number : ")
+    if first_number == 'q':
+        break
+    second_number = input("Enter Second Number : ")
+    if second_number == 'q':
+        break
+    try:
+        first_number = int(first_number)
+        second_number = int(second_number)
+        answer = first_number+second_number
+
+    except ValueError as ve: 
+        print("Invalid Input, Please provide valid input ...!")
+    except ZeroDivisionError as zde:
+        print("You cannot divide by 0 ...!")
+    else:
+        print(answer)
+"""
+print("*** Exercise 10.8 ***")
+"""
+from pathlib import Path
+cats = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/cats.txt')
+dogs = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/sources/dogs.txt')          
+
+try:
+    cats=cats.read_text(encoding='utf-8')
+except FileNotFoundError:
+    print(f"The file {cats} is not available..!")
+else:
+    print(cats)
+
+try:
+    dogs=dogs.read_text(encoding='utf-8')
+except FileNotFoundError:
+     print(f"The file {dogs} is not available..!")
+else:
+    print(dogs)
+"""
+print("*** Exercise 10.9 ***")
+"""
+from pathlib import Path
+cats = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/cats.txt')
+dogs = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/sources/dogs.txt')          
+
+try:
+    cats=cats.read_text(encoding='utf-8')
+except FileNotFoundError:
+    cats = None
+else:
+    print(cats)
+
+try:
+    dogs=dogs.read_text(encoding='utf-8')
+except FileNotFoundError:
+     dogs = None
+else:
+    print(dogs)
+"""
+print("*** Exercise 10.10 ***")
+"""
+from pathlib import Path
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/Gutenberg-Shakespeares.txt')
+txt = path.read_text(encoding='utf-8')
+word = 'great'
+count = txt.count(word)
+print(f"{word} = {count}")
+"""
+"""
+from pathlib import Path
+path = Path('/Users/sg/Documents/Python_Learning/SG/Programs/Data Files/source/Gutenberg-Shakespeares.txt')
+txt = path.read_text(encoding='utf-8')
+word = 'the'
+count = txt.count(word)
+print(f"{word} = {count}")
+"""
