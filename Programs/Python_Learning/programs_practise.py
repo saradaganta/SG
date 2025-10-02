@@ -74,6 +74,7 @@ far = (cels * 1.8) + 32
 print('%0.1f if degree of Celsius is equal to %0.1f Fahrenheit' %(cels,far))
 """
 # check number +ve or -ve
+"""
 num = float(input("Enter a number :"))
 if num > 0:
     print('Positive number')
@@ -81,3 +82,37 @@ elif num == 0:
     print("Zero")
 else:
     print('Negative')
+"""
+# Print Even or Odd
+"""
+num = int(input("Enter number :"))
+if(num % 2) == 0:
+    print(f"{num} is 'Even")
+else:
+    print(f"{num} is 'Odd")
+"""
+# check leap year
+"""
+year = int(input("Enter Year :"))
+if (year % 4) == 0:
+    if(year % 100) == 0:
+        if(year % 400) == 0:
+            print(f"{year} is a leap year")
+        else:
+            print(f"{year} is not a leap year")
+    else:
+        print(f"{year} is a leap year")
+else:
+    print(f"{year} is not a leap year")
+"""
+# Largest among 3 numbers
+num1 = 10
+num2 = 14
+num3 = 12
+if(num1 >= num2) and (num1 >= num3):
+    largest = num1
+elif(num2 >= num1) and (num2 >= num3):
+    largest = num2
+else:
+    largest = num3
+    print(f"The largest number between numbers is", largest)
